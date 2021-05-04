@@ -1,0 +1,2359 @@
+[
+    {
+        "id": "1af06f3.cd82711",
+        "type": "tab",
+        "label": "MQTT",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "7ab9d2db.847e04",
+        "type": "tab",
+        "label": "API",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "5572c50a.40f8e4",
+        "type": "subflow",
+        "name": "Get Data From Travel",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 60,
+                "y": 40,
+                "wires": [
+                    {
+                        "id": "b8fba7c7.12713"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 580,
+                "y": 160,
+                "wires": [
+                    {
+                        "id": "87e13071.8c1e58",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "color": "#DDAA99"
+    },
+    {
+        "id": "29b5b8f8.76eb8",
+        "type": "subflow",
+        "name": "Update Behaviours",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 160,
+                "y": 60,
+                "wires": [
+                    {
+                        "id": "f3eadbab.3dc08"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 1280,
+                "y": 260,
+                "wires": [
+                    {
+                        "id": "a40f7817.cecae",
+                        "port": 0
+                    },
+                    {
+                        "id": "9a03aeb0.5302e",
+                        "port": 0
+                    },
+                    {
+                        "id": "ad2daf08.655178",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "color": "#DDAA99"
+    },
+    {
+        "id": "1dc3f4e1.51a773",
+        "type": "mqtt-broker",
+        "name": "Local Broker",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": false,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "77342163.399388",
+        "type": "MySQLdatabase",
+        "name": "",
+        "host": "127.0.0.1",
+        "port": "3306",
+        "db": "mysql",
+        "tz": "",
+        "charset": "UTF8"
+    },
+    {
+        "id": "f7c0884a.2fc878",
+        "type": "ui_tab",
+        "name": "Car Monitor",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "3c06aea1.231232",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "f7c0884a.2fc878",
+        "order": 1,
+        "disp": false,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "4e70fdf0.d19d64",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "27b025c3.5abe7a",
+        "type": "ui_group",
+        "name": "Group 1",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "c42100e6.554af8",
+        "type": "ui_group",
+        "name": "Group 2",
+        "tab": "f7c0884a.2fc878",
+        "order": 2,
+        "disp": false,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "aa89122c.9d6458",
+        "type": "ui_group",
+        "name": "Group 3",
+        "tab": "f7c0884a.2fc878",
+        "order": 3,
+        "disp": false,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "db37b5e.f56d4c8",
+        "type": "mongodb",
+        "hostname": "127.0.0.1",
+        "topology": "direct",
+        "connectOptions": "",
+        "port": "27017",
+        "db": "CarMonitor",
+        "name": "Mongo CarMonitor"
+    },
+    {
+        "id": "b64cc2e4.3751b8",
+        "type": "mqtt-broker",
+        "name": "Remote",
+        "broker": "rafaelgomes.ddns.net",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": false,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "c4491ec8.9798d8",
+        "type": "mqtt in",
+        "z": "1af06f3.cd82711",
+        "name": "",
+        "topic": "/register_device",
+        "qos": "2",
+        "datatype": "json",
+        "broker": "1dc3f4e1.51a773",
+        "x": 100,
+        "y": 100,
+        "wires": [
+            [
+                "10cbcfe0.3903d8"
+            ]
+        ]
+    },
+    {
+        "id": "7304e32.4386c1c",
+        "type": "mqtt out",
+        "z": "1af06f3.cd82711",
+        "name": "",
+        "topic": "/login_device",
+        "qos": "0",
+        "retain": "false",
+        "broker": "1dc3f4e1.51a773",
+        "x": 970,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "9b09839.e73d18",
+        "type": "mqtt in",
+        "z": "1af06f3.cd82711",
+        "name": "",
+        "topic": "/health",
+        "qos": "2",
+        "datatype": "json",
+        "broker": "1dc3f4e1.51a773",
+        "x": 70,
+        "y": 420,
+        "wires": [
+            [
+                "b193768e.5cc48",
+                "93483225.fd26c"
+            ]
+        ]
+    },
+    {
+        "id": "f742428f.06d968",
+        "type": "mqtt in",
+        "z": "1af06f3.cd82711",
+        "name": "",
+        "topic": "/sensors",
+        "qos": "2",
+        "datatype": "json",
+        "broker": "1dc3f4e1.51a773",
+        "x": 80,
+        "y": 560,
+        "wires": [
+            [
+                "116d5bb3.ee92a4",
+                "bfc10125.552518",
+                "835ad15a.b4cfe"
+            ]
+        ]
+    },
+    {
+        "id": "29892e08.7529ba",
+        "type": "mqtt in",
+        "z": "1af06f3.cd82711",
+        "name": "",
+        "topic": "/register_car",
+        "qos": "2",
+        "datatype": "json",
+        "broker": "1dc3f4e1.51a773",
+        "x": 90,
+        "y": 320,
+        "wires": [
+            [
+                "f6819ca7.cb0b58"
+            ]
+        ]
+    },
+    {
+        "id": "606fac78.6de134",
+        "type": "mqtt out",
+        "z": "1af06f3.cd82711",
+        "name": "",
+        "topic": "/login_car",
+        "qos": "0",
+        "retain": "false",
+        "broker": "1dc3f4e1.51a773",
+        "x": 960,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "245d95a9.108f12",
+        "type": "http in",
+        "z": "7ab9d2db.847e04",
+        "name": "",
+        "url": "/configuration",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 130,
+        "y": 60,
+        "wires": [
+            [
+                "cf3c1955.dcfbb8"
+            ]
+        ]
+    },
+    {
+        "id": "cf3c1955.dcfbb8",
+        "type": "template",
+        "z": "7ab9d2db.847e04",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "json",
+        "syntax": "mustache",
+        "template": "{\n    \"sync\": 1,\n    \"config_host\": \"rafaelgomes.ddns.net\",\n    \"config_port\": \"1880\",\n    \"config_path\": \"/configuration\",\n    \"mqtt_server\": \"rafaelgomes.ddns.net\",\n    \"mqtt_port\": \"1883\",\n    \"mqtt_user\": \"\",\n    \"mqtt_pass\": \"\",\n    \"check_update\": 0,\n    \"update_host\": \"rafaelgomes.ddns.net\",\n    \"update_port\": \"1880\",\n    \"update_path\": \"/update\",\n    \"update_method\": \"GET\",\n    \"health_interval\": \"5000\",\n    \"sensor_interval\": \"1000\",\n    \"gsm_apn\": \"claro.com.br\",\n    \"gsm_user\": \"claro\",\n    \"gsm_pass\": \"claro\",\n    \"mqtt_topics\": [\n        {\n            \"method\": \"publish\",\n            \"for\": \"sensors\",\n            \"topic\": \"/sensors\"\n        },\n        {\n            \"method\": \"publish\",\n            \"for\": \"health\",\n            \"topic\": \"/health\"\n        },\n        {\n            \"method\": \"publish\",\n            \"for\": \"register_device\",\n            \"topic\": \"/register_device\"\n        },\n        {\n            \"method\": \"publish\",\n            \"for\": \"register_car\",\n            \"topic\": \"/register_car\"\n        },\n        {\n            \"method\": \"subscribe\",\n            \"for\": \"login_device\",\n            \"topic\": \"/login_device\"\n        },\n        {\n            \"method\": \"subscribe\",\n            \"for\": \"login_car\",\n            \"topic\": \"/login_car\"\n        }\n    ]\n}",
+        "output": "json",
+        "x": 660,
+        "y": 60,
+        "wires": [
+            [
+                "e9b20f03.ed28c8"
+            ]
+        ]
+    },
+    {
+        "id": "b12f7110.3fa4c8",
+        "type": "http in",
+        "z": "7ab9d2db.847e04",
+        "name": "",
+        "url": "/update",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 110,
+        "y": 20,
+        "wires": [
+            [
+                "95818be9.407bc"
+            ]
+        ]
+    },
+    {
+        "id": "95818be9.407bc",
+        "type": "template",
+        "z": "7ab9d2db.847e04",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "json",
+        "syntax": "mustache",
+        "template": "{\n    \"version\":1.0\n}",
+        "output": "json",
+        "x": 660,
+        "y": 20,
+        "wires": [
+            [
+                "e9b20f03.ed28c8"
+            ]
+        ]
+    },
+    {
+        "id": "475a2203.44fa1c",
+        "type": "http in",
+        "z": "7ab9d2db.847e04",
+        "name": "",
+        "url": "/api/cars/:deviceID",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 140,
+        "y": 220,
+        "wires": [
+            [
+                "3f5c70e2.e937a8"
+            ]
+        ]
+    },
+    {
+        "id": "e9b20f03.ed28c8",
+        "type": "http response",
+        "z": "7ab9d2db.847e04",
+        "name": "",
+        "statusCode": "200",
+        "headers": {
+            "content-type": "application/json"
+        },
+        "x": 940,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "3f5c70e2.e937a8",
+        "type": "function",
+        "z": "7ab9d2db.847e04",
+        "name": "",
+        "func": "var ObjectId = global.get('ObjectId');\ndelete msg.payload;\nmsg.payload = {_id: ObjectId(msg.req.params.deviceID)};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 480,
+        "y": 220,
+        "wires": [
+            [
+                "f12e0c47.090e"
+            ]
+        ]
+    },
+    {
+        "id": "ce549b8e.294f08",
+        "type": "http in",
+        "z": "7ab9d2db.847e04",
+        "name": "",
+        "url": "/api/devices",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 120,
+        "y": 100,
+        "wires": [
+            [
+                "353e8c83.d0e164"
+            ]
+        ]
+    },
+    {
+        "id": "9eb591f2.33027",
+        "type": "http in",
+        "z": "7ab9d2db.847e04",
+        "name": "",
+        "url": "/api/car/:id",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 120,
+        "y": 260,
+        "wires": [
+            [
+                "7b7d477b.a5e81"
+            ]
+        ]
+    },
+    {
+        "id": "7b7d477b.a5e81",
+        "type": "function",
+        "z": "7ab9d2db.847e04",
+        "name": "",
+        "func": "msg.payload = {cars: {\"$elemMatch\": {carVIN: msg.req.params.id}}};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 480,
+        "y": 260,
+        "wires": [
+            [
+                "ca358a08.4f337"
+            ]
+        ]
+    },
+    {
+        "id": "72530577.b11fac",
+        "type": "http in",
+        "z": "7ab9d2db.847e04",
+        "name": "",
+        "url": "/api/car/:id/travels",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 140,
+        "y": 300,
+        "wires": [
+            [
+                "70289fba.66b308"
+            ]
+        ]
+    },
+    {
+        "id": "70289fba.66b308",
+        "type": "function",
+        "z": "7ab9d2db.847e04",
+        "name": "",
+        "func": "msg.payload = {carVIN: msg.req.params.id};\nlet startDate = msg.req.query.startDate;\nlet endDate = msg.req.query.endDate;\nmsg.sort = {timestamp: -1}\n\nif(startDate != null) {\n    if(msg.payload.timestamp == undefined) msg.payload.timestamp = {};\n    msg.payload.timestamp.$gte = startDate/1000;\n}\nif(endDate != null) {\n    if(msg.payload.timestamp == undefined) msg.payload.timestamp = {};\n    msg.payload.timestamp.$lte = endDate/1000;\n}\nif(msg.payload.records == undefined) msg.payload.records = {};\nmsg.payload.records.$gte = 0;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 480,
+        "y": 300,
+        "wires": [
+            [
+                "f26e01ec.83767"
+            ]
+        ]
+    },
+    {
+        "id": "dad359a4.b6761",
+        "type": "http in",
+        "z": "7ab9d2db.847e04",
+        "name": "",
+        "url": "/api/travels",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 120,
+        "y": 340,
+        "wires": [
+            [
+                "ff34cceb.577a8"
+            ]
+        ]
+    },
+    {
+        "id": "e951f2fa.91cac8",
+        "type": "http in",
+        "z": "7ab9d2db.847e04",
+        "name": "",
+        "url": "/api/device/:id",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 130,
+        "y": 140,
+        "wires": [
+            [
+                "9dffeba3.727b18"
+            ]
+        ]
+    },
+    {
+        "id": "9dffeba3.727b18",
+        "type": "function",
+        "z": "7ab9d2db.847e04",
+        "name": "",
+        "func": "var ObjectId = global.get('ObjectId');\ndelete msg.payload;\nmsg.payload = {_id: ObjectId(msg.req.params.id)};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 480,
+        "y": 140,
+        "wires": [
+            [
+                "e0b0e358.8cb6a8"
+            ]
+        ]
+    },
+    {
+        "id": "220de685.a0540a",
+        "type": "http in",
+        "z": "7ab9d2db.847e04",
+        "name": "",
+        "url": "/api/device/:id/status",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 150,
+        "y": 180,
+        "wires": [
+            [
+                "588af7a9.d20e"
+            ]
+        ]
+    },
+    {
+        "id": "588af7a9.d20e",
+        "type": "function",
+        "z": "7ab9d2db.847e04",
+        "name": "",
+        "func": "delete msg.payload;\nmsg.payload = {device_id: msg.req.params.id};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 480,
+        "y": 180,
+        "wires": [
+            [
+                "febc5094.591608"
+            ]
+        ]
+    },
+    {
+        "id": "6341dc91.fb543c",
+        "type": "mongodb in",
+        "z": "1af06f3.cd82711",
+        "mongodb": "db37b5e.f56d4c8",
+        "name": "",
+        "collection": "Devices",
+        "operation": "find",
+        "x": 580,
+        "y": 100,
+        "wires": [
+            [
+                "c835993.9f57b68"
+            ]
+        ]
+    },
+    {
+        "id": "c835993.9f57b68",
+        "type": "function",
+        "z": "1af06f3.cd82711",
+        "name": "",
+        "func": "if (msg.payload.length === 0) {\n    msg.payload = msg.data;\n    return [msg,null]\n}else{\n    msg.payload[0].unix_time = msg.data.unix_time;\n    msg.data = msg.payload[0];\n    msg.payload = { \"id\": msg.data._id };\n    return [null,msg];\n}",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 780,
+        "y": 100,
+        "wires": [
+            [
+                "79124821.b6798",
+                "8b048364.6118"
+            ],
+            [
+                "7304e32.4386c1c",
+                "4d37e774.4dd048",
+                "fd3407f6.49d878"
+            ]
+        ]
+    },
+    {
+        "id": "10cbcfe0.3903d8",
+        "type": "function",
+        "z": "1af06f3.cd82711",
+        "name": "",
+        "func": "msg.data = msg.payload;\ndelete msg.payload;\nmsg.payload = {imei: msg.data.imei};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 320,
+        "y": 100,
+        "wires": [
+            [
+                "6341dc91.fb543c"
+            ]
+        ]
+    },
+    {
+        "id": "79124821.b6798",
+        "type": "mongodb out",
+        "z": "1af06f3.cd82711",
+        "mongodb": "db37b5e.f56d4c8",
+        "name": "",
+        "collection": "Devices",
+        "payonly": true,
+        "upsert": false,
+        "multi": false,
+        "operation": "store",
+        "x": 1020,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "1cb7c98b.aff4ee",
+        "type": "mongodb in",
+        "z": "1af06f3.cd82711",
+        "mongodb": "db37b5e.f56d4c8",
+        "name": "",
+        "collection": "Devices",
+        "operation": "find",
+        "x": 580,
+        "y": 320,
+        "wires": [
+            [
+                "e17a96eb.f3c4f"
+            ]
+        ]
+    },
+    {
+        "id": "e17a96eb.f3c4f",
+        "type": "function",
+        "z": "1af06f3.cd82711",
+        "name": "",
+        "func": "function createUUID() {\n    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {\n        var r = Math.random() * 16 | 0,\n            v = c == 'x' ? r : (r & 0x3 | 0x8);\n        return v.toString(16);\n    });\n}\n\nif (msg.payload.length === 0) return;\n\nlet device = msg.payload[0];\n\nif (device.cars == undefined) device.cars = [];\n\nlet car = device.cars.find(x => x.carVIN == msg.data.carVIN);\n\nif (car == undefined) {\n    device.cars.push(msg.data);\n    msg.query = {\n        _id: device._id\n    };\n    delete device._id;\n    msg.payload = device;\n    return [msg, null];\n}\nmsg.device = device;\nmsg.payload = {\n    \"travel_id\": createUUID()\n};\nreturn [null, msg];",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 780,
+        "y": 320,
+        "wires": [
+            [
+                "2f1aa8cc.26a7e8",
+                "71ee5f5c.9258"
+            ],
+            [
+                "606fac78.6de134",
+                "2634262f.7f2622",
+                "38f5881d.94609",
+                "1d5f4852.259b5"
+            ]
+        ]
+    },
+    {
+        "id": "f6819ca7.cb0b58",
+        "type": "function",
+        "z": "1af06f3.cd82711",
+        "name": "",
+        "func": "var ObjectId = global.get('ObjectId');\nmsg.data = msg.payload;\ndelete msg.payload;\nmsg.payload = {_id: ObjectId(msg.data.deviceId)};\ndelete msg.data.deviceId;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 320,
+        "y": 320,
+        "wires": [
+            [
+                "1cb7c98b.aff4ee"
+            ]
+        ]
+    },
+    {
+        "id": "3a4f499f.9dcb6e",
+        "type": "mongodb out",
+        "z": "1af06f3.cd82711",
+        "mongodb": "db37b5e.f56d4c8",
+        "name": "Mongo - Add New Sensor Data",
+        "collection": "Sensors",
+        "payonly": true,
+        "upsert": false,
+        "multi": false,
+        "operation": "store",
+        "x": 590,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "3367e45f.cc981c",
+        "type": "function",
+        "z": "1af06f3.cd82711",
+        "name": "",
+        "func": "if ((msg.i += 1) < msg.items.length) return msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 320,
+        "y": 520,
+        "wires": [
+            [
+                "116d5bb3.ee92a4"
+            ]
+        ]
+    },
+    {
+        "id": "116d5bb3.ee92a4",
+        "type": "function",
+        "z": "1af06f3.cd82711",
+        "name": "",
+        "func": "function createUUID() {\n    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {\n        var r = Math.random() * 16 | 0,\n            v = c == 'x' ? r : (r & 0x3 | 0x8);\n        return v.toString(16);\n    });\n}\n\nif (msg.i == undefined) msg.i = 0;\nif (msg.group == undefined) msg.group = createUUID;\nif (msg.items == undefined) msg.items = msg.payload.sensors;\nif (msg.receive_date == undefined) msg.receive_date = msg.payload.unix_time;\nif (msg.car_status == undefined) {\n    let kmh = msg.payload.sensors.find(x => x.pid == \"0D\");\n    msg.car_status = kmh.value > 0 ? \"Moving\" : \"Stop\";\n}\n\nmsg.items[msg.i].car_status = msg.car_status;\nmsg.items[msg.i].receive_date = msg.receive_date;\nmsg.items[msg.i].travel_id = msg.payload.travel_id;\nmsg.items[msg.i].group = msg.payload.group;\nmsg.payload = msg.items[msg.i];\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 320,
+        "y": 480,
+        "wires": [
+            [
+                "3367e45f.cc981c",
+                "3a4f499f.9dcb6e"
+            ]
+        ]
+    },
+    {
+        "id": "b193768e.5cc48",
+        "type": "mongodb out",
+        "z": "1af06f3.cd82711",
+        "mongodb": "db37b5e.f56d4c8",
+        "name": "",
+        "collection": "DeviceStatus",
+        "payonly": true,
+        "upsert": false,
+        "multi": false,
+        "operation": "store",
+        "x": 600,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "353e8c83.d0e164",
+        "type": "mongodb in",
+        "z": "7ab9d2db.847e04",
+        "mongodb": "db37b5e.f56d4c8",
+        "name": "Devices",
+        "collection": "Devices",
+        "operation": "find",
+        "x": 660,
+        "y": 100,
+        "wires": [
+            [
+                "e9b20f03.ed28c8"
+            ]
+        ]
+    },
+    {
+        "id": "e0b0e358.8cb6a8",
+        "type": "mongodb in",
+        "z": "7ab9d2db.847e04",
+        "mongodb": "db37b5e.f56d4c8",
+        "name": "Devices",
+        "collection": "Devices",
+        "operation": "find",
+        "x": 660,
+        "y": 140,
+        "wires": [
+            [
+                "e9b20f03.ed28c8"
+            ]
+        ]
+    },
+    {
+        "id": "febc5094.591608",
+        "type": "mongodb in",
+        "z": "7ab9d2db.847e04",
+        "mongodb": "db37b5e.f56d4c8",
+        "name": "Device Status",
+        "collection": "DeviceStatus",
+        "operation": "find",
+        "x": 680,
+        "y": 180,
+        "wires": [
+            [
+                "e9b20f03.ed28c8"
+            ]
+        ]
+    },
+    {
+        "id": "f12e0c47.090e",
+        "type": "mongodb in",
+        "z": "7ab9d2db.847e04",
+        "mongodb": "db37b5e.f56d4c8",
+        "name": "Devices",
+        "collection": "Devices",
+        "operation": "find",
+        "x": 660,
+        "y": 220,
+        "wires": [
+            [
+                "e9b20f03.ed28c8"
+            ]
+        ]
+    },
+    {
+        "id": "ca358a08.4f337",
+        "type": "mongodb in",
+        "z": "7ab9d2db.847e04",
+        "mongodb": "db37b5e.f56d4c8",
+        "name": "Devices",
+        "collection": "Devices",
+        "operation": "find",
+        "x": 660,
+        "y": 260,
+        "wires": [
+            [
+                "e9b20f03.ed28c8"
+            ]
+        ]
+    },
+    {
+        "id": "f26e01ec.83767",
+        "type": "mongodb in",
+        "z": "7ab9d2db.847e04",
+        "mongodb": "db37b5e.f56d4c8",
+        "name": "Travel",
+        "collection": "Travel",
+        "operation": "find",
+        "x": 650,
+        "y": 300,
+        "wires": [
+            [
+                "e9b20f03.ed28c8"
+            ]
+        ]
+    },
+    {
+        "id": "ff34cceb.577a8",
+        "type": "mongodb in",
+        "z": "7ab9d2db.847e04",
+        "mongodb": "db37b5e.f56d4c8",
+        "name": "Travel",
+        "collection": "Travel",
+        "operation": "find",
+        "x": 650,
+        "y": 340,
+        "wires": [
+            [
+                "e9b20f03.ed28c8"
+            ]
+        ]
+    },
+    {
+        "id": "b6d82bfe.0f2fd",
+        "type": "http in",
+        "z": "7ab9d2db.847e04",
+        "name": "",
+        "url": "/api/car/:id",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 120,
+        "y": 740,
+        "wires": [
+            [
+                "6eba5ed1.8cef78",
+                "c7e0b185.7324b8"
+            ]
+        ]
+    },
+    {
+        "id": "91b750e.f092eb",
+        "type": "mongodb out",
+        "z": "7ab9d2db.847e04",
+        "mongodb": "db37b5e.f56d4c8",
+        "name": "Devices",
+        "collection": "Devices",
+        "payonly": true,
+        "upsert": false,
+        "multi": false,
+        "operation": "store",
+        "x": 660,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "6557f562.afd254",
+        "type": "mqtt in",
+        "z": "1af06f3.cd82711",
+        "name": "ALL Topics",
+        "topic": "/#",
+        "qos": "0",
+        "datatype": "json",
+        "broker": "1dc3f4e1.51a773",
+        "x": 980,
+        "y": 600,
+        "wires": [
+            [
+                "791c186e.f71ce"
+            ]
+        ]
+    },
+    {
+        "id": "791c186e.f71ce",
+        "type": "debug",
+        "z": "1af06f3.cd82711",
+        "name": "Debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1150,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "72cb38c9.24ee5",
+        "type": "mqtt out",
+        "z": "1af06f3.cd82711",
+        "name": "",
+        "topic": "/register_device",
+        "qos": "0",
+        "retain": "false",
+        "broker": "1dc3f4e1.51a773",
+        "x": 1180,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "1e56cd5.37690b3",
+        "type": "mqtt out",
+        "z": "1af06f3.cd82711",
+        "name": "",
+        "topic": "/register_car",
+        "qos": "0",
+        "retain": "false",
+        "broker": "1dc3f4e1.51a773",
+        "x": 1170,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "fd82c9e1.3a3c38",
+        "type": "inject",
+        "z": "1af06f3.cd82711",
+        "name": "New Device",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"imei\":\"860389056565515\",\"ccid\":\"89550534100028676535\",\"imsi\":\"724051028280559\",\"operator\":\"Claro\",\"board\":\"ESP32\",\"version\":4}",
+        "payloadType": "json",
+        "x": 970,
+        "y": 520,
+        "wires": [
+            [
+                "72cb38c9.24ee5"
+            ]
+        ]
+    },
+    {
+        "id": "6d982346.4d62c4",
+        "type": "inject",
+        "z": "1af06f3.cd82711",
+        "name": "New Car",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"deviceId\":\"603bd4acb333250177e9d3f2\",\"carVIN\":\"9BWAH5BZ3LP067439\",\"carSensor\":\"\"}",
+        "payloadType": "json",
+        "x": 980,
+        "y": 560,
+        "wires": [
+            [
+                "1e56cd5.37690b3"
+            ]
+        ]
+    },
+    {
+        "id": "2f1aa8cc.26a7e8",
+        "type": "mongodb out",
+        "z": "1af06f3.cd82711",
+        "mongodb": "db37b5e.f56d4c8",
+        "name": "",
+        "collection": "Devices",
+        "payonly": true,
+        "upsert": false,
+        "multi": false,
+        "operation": "update",
+        "x": 1020,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "df92713e.4985c",
+        "type": "mongodb out",
+        "z": "1af06f3.cd82711",
+        "mongodb": "db37b5e.f56d4c8",
+        "name": "",
+        "collection": "Log",
+        "payonly": true,
+        "upsert": false,
+        "multi": false,
+        "operation": "insert",
+        "x": 1170,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "8b048364.6118",
+        "type": "function",
+        "z": "1af06f3.cd82711",
+        "name": "",
+        "func": "msg.payload = {\n    timestamp: msg.data.unix_time,\n    event: \"Register\",\n    resource: \"Device\",\n    key: msg.data.imei\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 960,
+        "y": 40,
+        "wires": [
+            [
+                "df92713e.4985c"
+            ]
+        ]
+    },
+    {
+        "id": "4d37e774.4dd048",
+        "type": "function",
+        "z": "1af06f3.cd82711",
+        "name": "",
+        "func": "msg.payload = {\n    timestamp: msg.data.unix_time,\n    event: \"Login\",\n    resource: \"Device\",\n    key: msg.data.imei\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 960,
+        "y": 160,
+        "wires": [
+            [
+                "87d4b84a.239c78"
+            ]
+        ]
+    },
+    {
+        "id": "87d4b84a.239c78",
+        "type": "mongodb out",
+        "z": "1af06f3.cd82711",
+        "mongodb": "db37b5e.f56d4c8",
+        "name": "",
+        "collection": "Log",
+        "payonly": true,
+        "upsert": false,
+        "multi": false,
+        "operation": "insert",
+        "x": 1170,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "71ee5f5c.9258",
+        "type": "function",
+        "z": "1af06f3.cd82711",
+        "name": "",
+        "func": "msg.payload = {\n    timestamp: msg.data.unix_time,\n    event: \"Register\",\n    resource: \"Car\",\n    key: msg.data.carVIN\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 960,
+        "y": 260,
+        "wires": [
+            [
+                "7efc3dd8.5a345c"
+            ]
+        ]
+    },
+    {
+        "id": "7efc3dd8.5a345c",
+        "type": "mongodb out",
+        "z": "1af06f3.cd82711",
+        "mongodb": "db37b5e.f56d4c8",
+        "name": "",
+        "collection": "Log",
+        "payonly": true,
+        "upsert": false,
+        "multi": false,
+        "operation": "insert",
+        "x": 1170,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "2634262f.7f2622",
+        "type": "function",
+        "z": "1af06f3.cd82711",
+        "name": "",
+        "func": "msg.payload = {\n    timestamp: msg.data.unix_time,\n    event: \"Login\",\n    resource: \"Car\",\n    key: msg.data.carVIN\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 960,
+        "y": 380,
+        "wires": [
+            [
+                "ff73195a.7a118"
+            ]
+        ]
+    },
+    {
+        "id": "ff73195a.7a118",
+        "type": "mongodb out",
+        "z": "1af06f3.cd82711",
+        "mongodb": "db37b5e.f56d4c8",
+        "name": "",
+        "collection": "Log",
+        "payonly": true,
+        "upsert": false,
+        "multi": false,
+        "operation": "insert",
+        "x": 1170,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "93483225.fd26c",
+        "type": "function",
+        "z": "1af06f3.cd82711",
+        "name": "",
+        "func": "let ts = new Date();\nts.setHours(ts.getHours() - 3);\n\nmsg.payload = {\n    timestamp: ts,\n    event: \"Health\",\n    resource: \"Device\",\n    key: msg.data.device_id\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 320,
+        "y": 380,
+        "wires": [
+            [
+                "7ef83c14.66ab74"
+            ]
+        ]
+    },
+    {
+        "id": "7ef83c14.66ab74",
+        "type": "mongodb out",
+        "z": "1af06f3.cd82711",
+        "mongodb": "db37b5e.f56d4c8",
+        "name": "",
+        "collection": "Log",
+        "payonly": true,
+        "upsert": false,
+        "multi": false,
+        "operation": "insert",
+        "x": 570,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "bfc10125.552518",
+        "type": "function",
+        "z": "1af06f3.cd82711",
+        "name": "",
+        "func": "msg.payload = {\n    timestamp: msg.payload.unix_time,\n    event: \"Register\",\n    resource: \"Sensor\",\n    key: msg.payload.travel_id\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 320,
+        "y": 560,
+        "wires": [
+            [
+                "5f9cfc8d.d6490c"
+            ]
+        ]
+    },
+    {
+        "id": "5f9cfc8d.d6490c",
+        "type": "mongodb out",
+        "z": "1af06f3.cd82711",
+        "mongodb": "db37b5e.f56d4c8",
+        "name": "",
+        "collection": "Log",
+        "payonly": true,
+        "upsert": false,
+        "multi": false,
+        "operation": "insert",
+        "x": 570,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "f85eb3c7.9fe298",
+        "type": "http in",
+        "z": "7ab9d2db.847e04",
+        "name": "",
+        "url": "/api/logs",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 110,
+        "y": 460,
+        "wires": [
+            [
+                "4af70ffc.29922"
+            ]
+        ]
+    },
+    {
+        "id": "6efb0786.f28978",
+        "type": "mongodb in",
+        "z": "7ab9d2db.847e04",
+        "mongodb": "db37b5e.f56d4c8",
+        "name": "Log",
+        "collection": "Log",
+        "operation": "find",
+        "x": 650,
+        "y": 460,
+        "wires": [
+            [
+                "e9b20f03.ed28c8"
+            ]
+        ]
+    },
+    {
+        "id": "6eba5ed1.8cef78",
+        "type": "http response",
+        "z": "7ab9d2db.847e04",
+        "name": "",
+        "statusCode": "200",
+        "headers": {
+            "content-type": "application/json"
+        },
+        "x": 320,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "c7e0b185.7324b8",
+        "type": "function",
+        "z": "7ab9d2db.847e04",
+        "name": "",
+        "func": "var ObjectId = global.get('ObjectId');\nmsg._id = ObjectId(msg.payload._id);\ndelete msg.payload._id;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 480,
+        "y": 740,
+        "wires": [
+            [
+                "91b750e.f092eb"
+            ]
+        ]
+    },
+    {
+        "id": "4af70ffc.29922",
+        "type": "function",
+        "z": "7ab9d2db.847e04",
+        "name": "",
+        "func": "msg.sort = {timestamp: -1}\nmsg.limit = 50;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 480,
+        "y": 460,
+        "wires": [
+            [
+                "6efb0786.f28978"
+            ]
+        ]
+    },
+    {
+        "id": "38f5881d.94609",
+        "type": "function",
+        "z": "1af06f3.cd82711",
+        "name": "",
+        "func": "msg.payload = {\n    id: msg.payload.travel_id,\n    carVIN: msg.data.carVIN,\n    deviceId: msg.device._id,\n    timestamp: msg.data.unix_time\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 960,
+        "y": 420,
+        "wires": [
+            [
+                "da276677.707bd8"
+            ]
+        ]
+    },
+    {
+        "id": "da276677.707bd8",
+        "type": "mongodb out",
+        "z": "1af06f3.cd82711",
+        "mongodb": "db37b5e.f56d4c8",
+        "name": "",
+        "collection": "Travel",
+        "payonly": true,
+        "upsert": false,
+        "multi": false,
+        "operation": "insert",
+        "x": 1170,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "cdcf256c.a371b",
+        "type": "http in",
+        "z": "7ab9d2db.847e04",
+        "name": "",
+        "url": "/api/travel/:id",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 130,
+        "y": 380,
+        "wires": [
+            [
+                "a61da178.f1e5e"
+            ]
+        ]
+    },
+    {
+        "id": "a61da178.f1e5e",
+        "type": "function",
+        "z": "7ab9d2db.847e04",
+        "name": "",
+        "func": "msg.payload = {id: msg.req.params.id};\nmsg.sort = {timestamp: -1};\nmsg.limit = 50;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 480,
+        "y": 380,
+        "wires": [
+            [
+                "e767853.8ea0d78"
+            ]
+        ]
+    },
+    {
+        "id": "e767853.8ea0d78",
+        "type": "mongodb in",
+        "z": "7ab9d2db.847e04",
+        "mongodb": "db37b5e.f56d4c8",
+        "name": "Travel",
+        "collection": "Travel",
+        "operation": "find",
+        "x": 650,
+        "y": 380,
+        "wires": [
+            [
+                "e9b20f03.ed28c8"
+            ]
+        ]
+    },
+    {
+        "id": "485388ae.92964",
+        "type": "mongodb in",
+        "z": "7ab9d2db.847e04",
+        "mongodb": "db37b5e.f56d4c8",
+        "name": "Sensors",
+        "collection": "Sensors",
+        "operation": "find",
+        "x": 660,
+        "y": 420,
+        "wires": [
+            [
+                "e9b20f03.ed28c8"
+            ]
+        ]
+    },
+    {
+        "id": "426978fd.6cae38",
+        "type": "function",
+        "z": "7ab9d2db.847e04",
+        "name": "",
+        "func": "msg.payload = {travel_id: msg.req.params.id};\n\nlet pid = msg.req.query.pid;\nlet startDate = msg.req.query.startDate;\nlet endDate = msg.req.query.endDate;\nlet value = msg.req.query.value;\nlet state = msg.req.query.state;\n\nif(pid != null) msg.payload.pid = pid;\n\nif(startDate != null) {\n    if(msg.payload.receive_date == undefined) msg.payload.receive_date = {};\n    msg.payload.receive_date.$gte = startDate/1000;\n}\nif(endDate != null) {\n    if(msg.payload.receive_date == undefined) msg.payload.receive_date = {};\n    msg.payload.receive_date.$lte = endDate/1000;\n}\nif(value != null) {\n    if(msg.payload.value == undefined) msg.payload.value = {};\n    msg.payload.value.$gte = parseFloat(value);\n}\nif(state != null && state != \"All\") msg.payload.car_status = state\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 480,
+        "y": 420,
+        "wires": [
+            [
+                "485388ae.92964"
+            ]
+        ]
+    },
+    {
+        "id": "51167667.dcd42",
+        "type": "http in",
+        "z": "7ab9d2db.847e04",
+        "name": "",
+        "url": "/api/travel/:id/sensors",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 150,
+        "y": 420,
+        "wires": [
+            [
+                "426978fd.6cae38"
+            ]
+        ]
+    },
+    {
+        "id": "811f3736.fd4db",
+        "type": "mongodb out",
+        "z": "1af06f3.cd82711",
+        "mongodb": "db37b5e.f56d4c8",
+        "name": "",
+        "collection": "Log",
+        "payonly": true,
+        "upsert": false,
+        "multi": false,
+        "operation": "insert",
+        "x": 1170,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "1d5f4852.259b5",
+        "type": "function",
+        "z": "1af06f3.cd82711",
+        "name": "",
+        "func": "msg.payload = {\n    timestamp: msg.data.unix_time,\n    event: \"Register\",\n    resource: \"Travel\",\n    key: msg.payload.travel_id\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 960,
+        "y": 460,
+        "wires": [
+            [
+                "811f3736.fd4db"
+            ]
+        ]
+    },
+    {
+        "id": "eeb7753f.ab1a28",
+        "type": "mongodb in",
+        "z": "1af06f3.cd82711",
+        "mongodb": "db37b5e.f56d4c8",
+        "name": "",
+        "collection": "Sensors",
+        "operation": "count",
+        "x": 580,
+        "y": 600,
+        "wires": [
+            [
+                "f3a4df75.99f198"
+            ]
+        ]
+    },
+    {
+        "id": "f3a4df75.99f198",
+        "type": "function",
+        "z": "1af06f3.cd82711",
+        "name": "",
+        "func": "msg.records = msg.payload;\nmsg.payload = {\"id\":msg.travel_id};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 320,
+        "y": 640,
+        "wires": [
+            [
+                "9ca41fee.111808"
+            ]
+        ]
+    },
+    {
+        "id": "9ca41fee.111808",
+        "type": "mongodb in",
+        "z": "1af06f3.cd82711",
+        "mongodb": "db37b5e.f56d4c8",
+        "name": "",
+        "collection": "Travel",
+        "operation": "find",
+        "x": 570,
+        "y": 640,
+        "wires": [
+            [
+                "d96474ab.c70b1"
+            ]
+        ]
+    },
+    {
+        "id": "d96474ab.c70b1",
+        "type": "function",
+        "z": "1af06f3.cd82711",
+        "name": "",
+        "func": "msg.payload = msg.payload[0]\nmsg.query = { _id: msg.payload._id} ;\ndelete msg.payload._id;\nmsg.payload.records = msg.records+msg.increment;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 320,
+        "y": 680,
+        "wires": [
+            [
+                "cd3ab3bc.d2725"
+            ]
+        ]
+    },
+    {
+        "id": "cd3ab3bc.d2725",
+        "type": "mongodb out",
+        "z": "1af06f3.cd82711",
+        "mongodb": "db37b5e.f56d4c8",
+        "name": "",
+        "collection": "Travel",
+        "payonly": false,
+        "upsert": false,
+        "multi": false,
+        "operation": "update",
+        "x": 570,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "835ad15a.b4cfe",
+        "type": "function",
+        "z": "1af06f3.cd82711",
+        "name": "",
+        "func": "msg.travel_id = msg.payload.travel_id;\nmsg.increment = msg.payload.sensors.length;\nmsg.payload = {\"travel_id\":msg.travel_id};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 320,
+        "y": 600,
+        "wires": [
+            [
+                "eeb7753f.ab1a28"
+            ]
+        ]
+    },
+    {
+        "id": "fd3407f6.49d878",
+        "type": "function",
+        "z": "1af06f3.cd82711",
+        "name": "",
+        "func": "msg.payload = msg.data;\nmsg.query = { _id: msg.payload._id} ;\ndelete msg.payload._id;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 960,
+        "y": 200,
+        "wires": [
+            [
+                "2b1f60f5.6f385"
+            ]
+        ]
+    },
+    {
+        "id": "2b1f60f5.6f385",
+        "type": "mongodb out",
+        "z": "1af06f3.cd82711",
+        "mongodb": "db37b5e.f56d4c8",
+        "name": "",
+        "collection": "Devices",
+        "payonly": false,
+        "upsert": false,
+        "multi": false,
+        "operation": "update",
+        "x": 1180,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "1bc2609b.06a3df",
+        "type": "http in",
+        "z": "7ab9d2db.847e04",
+        "name": "",
+        "url": "/api/profile",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 120,
+        "y": 700,
+        "wires": [
+            [
+                "d84111ad.011da",
+                "6eba5ed1.8cef78"
+            ]
+        ]
+    },
+    {
+        "id": "d84111ad.011da",
+        "type": "mongodb out",
+        "z": "7ab9d2db.847e04",
+        "mongodb": "db37b5e.f56d4c8",
+        "name": "Profiles",
+        "collection": "Profiles",
+        "payonly": true,
+        "upsert": false,
+        "multi": false,
+        "operation": "store",
+        "x": 660,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "9fc8b278.7835b",
+        "type": "http in",
+        "z": "7ab9d2db.847e04",
+        "name": "",
+        "url": "/api/profiles",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 120,
+        "y": 500,
+        "wires": [
+            [
+                "c46b0388.020468"
+            ]
+        ]
+    },
+    {
+        "id": "c46b0388.020468",
+        "type": "mongodb in",
+        "z": "7ab9d2db.847e04",
+        "mongodb": "db37b5e.f56d4c8",
+        "name": "Profiles",
+        "collection": "Profiles",
+        "operation": "find",
+        "x": 660,
+        "y": 500,
+        "wires": [
+            [
+                "e9b20f03.ed28c8"
+            ]
+        ]
+    },
+    {
+        "id": "8a3328a1.58e77",
+        "type": "http in",
+        "z": "7ab9d2db.847e04",
+        "name": "",
+        "url": "/api/profile/:id",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 130,
+        "y": 540,
+        "wires": [
+            [
+                "fa1f6144.44ba3"
+            ]
+        ]
+    },
+    {
+        "id": "fa1f6144.44ba3",
+        "type": "function",
+        "z": "7ab9d2db.847e04",
+        "name": "",
+        "func": "var ObjectId = global.get('ObjectId');\ndelete msg.payload;\nmsg.payload = {_id: ObjectId(msg.req.params.id)};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 480,
+        "y": 540,
+        "wires": [
+            [
+                "1e333ed4.df9b89"
+            ]
+        ]
+    },
+    {
+        "id": "1e333ed4.df9b89",
+        "type": "mongodb in",
+        "z": "7ab9d2db.847e04",
+        "mongodb": "db37b5e.f56d4c8",
+        "name": "Profiles",
+        "collection": "Profiles",
+        "operation": "find",
+        "x": 660,
+        "y": 540,
+        "wires": [
+            [
+                "e9b20f03.ed28c8"
+            ]
+        ]
+    },
+    {
+        "id": "9f2e3f88.b394f",
+        "type": "http in",
+        "z": "7ab9d2db.847e04",
+        "name": "",
+        "url": "/api/profile/:id",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 130,
+        "y": 660,
+        "wires": [
+            [
+                "af53672d.91b4b8",
+                "6eba5ed1.8cef78"
+            ]
+        ]
+    },
+    {
+        "id": "af53672d.91b4b8",
+        "type": "function",
+        "z": "7ab9d2db.847e04",
+        "name": "",
+        "func": "var ObjectId = global.get('ObjectId');\nmsg._id = ObjectId(msg.payload._id);\ndelete msg.payload._id;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 480,
+        "y": 660,
+        "wires": [
+            [
+                "5473014d.fc00b"
+            ]
+        ]
+    },
+    {
+        "id": "5473014d.fc00b",
+        "type": "mongodb out",
+        "z": "7ab9d2db.847e04",
+        "mongodb": "db37b5e.f56d4c8",
+        "name": "Profiles",
+        "collection": "Profiles",
+        "payonly": true,
+        "upsert": false,
+        "multi": false,
+        "operation": "store",
+        "x": 660,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "b8fba7c7.12713",
+        "type": "function",
+        "z": "5572c50a.40f8e4",
+        "name": "",
+        "func": "msg.payload.id = msg.payload.travel_id;\ndelete msg.payload.travel_id;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 180,
+        "y": 40,
+        "wires": [
+            [
+                "8704a3ad.c7b2f8"
+            ]
+        ]
+    },
+    {
+        "id": "8704a3ad.c7b2f8",
+        "type": "mongodb in",
+        "z": "5572c50a.40f8e4",
+        "mongodb": "db37b5e.f56d4c8",
+        "name": "",
+        "collection": "Travel",
+        "operation": "find",
+        "x": 390,
+        "y": 40,
+        "wires": [
+            [
+                "bc51a26f.ee573"
+            ]
+        ]
+    },
+    {
+        "id": "bc51a26f.ee573",
+        "type": "function",
+        "z": "5572c50a.40f8e4",
+        "name": "",
+        "func": "msg.travel = msg.payload[0];\nmsg.payload = { \"cars.carVIN\": msg.travel.carVIN };\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 180,
+        "y": 80,
+        "wires": [
+            [
+                "cd9bd2ad.7dee6"
+            ]
+        ]
+    },
+    {
+        "id": "cd9bd2ad.7dee6",
+        "type": "mongodb in",
+        "z": "5572c50a.40f8e4",
+        "mongodb": "db37b5e.f56d4c8",
+        "name": "",
+        "collection": "Devices",
+        "operation": "find",
+        "x": 400,
+        "y": 80,
+        "wires": [
+            [
+                "ca7f45f3.b03e5"
+            ]
+        ]
+    },
+    {
+        "id": "ca7f45f3.b03e5",
+        "type": "function",
+        "z": "5572c50a.40f8e4",
+        "name": "",
+        "func": "msg.payload = msg.payload[0];\nif (msg.payload.cars == undefined) return null;\n\nmsg.car = msg.payload.cars.find(x => x.carVIN == msg.travel.carVIN);\ndelete msg.payload;\n\nvar ObjectId = global.get('ObjectId');\nmsg.payload = {_id: ObjectId(msg.car.profile)};\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 180,
+        "y": 120,
+        "wires": [
+            [
+                "544cfc69.b9e024"
+            ]
+        ]
+    },
+    {
+        "id": "544cfc69.b9e024",
+        "type": "mongodb in",
+        "z": "5572c50a.40f8e4",
+        "mongodb": "db37b5e.f56d4c8",
+        "name": "",
+        "collection": "Profiles",
+        "operation": "find",
+        "x": 400,
+        "y": 120,
+        "wires": [
+            [
+                "87e13071.8c1e58"
+            ]
+        ]
+    },
+    {
+        "id": "87e13071.8c1e58",
+        "type": "function",
+        "z": "5572c50a.40f8e4",
+        "name": "",
+        "func": "msg.profile = msg.payload[0];\ndelete msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 180,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f3eadbab.3dc08",
+        "type": "function",
+        "z": "29b5b8f8.76eb8",
+        "name": "Prepare Query",
+        "func": "msg.payload = { \"cars.carVIN\": msg.carVIN, \"cars.profile\": {\"$exists\" : true, \"$ne\" : \"\"} };\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 320,
+        "y": 60,
+        "wires": [
+            [
+                "b7da0fba.8c3c2"
+            ]
+        ]
+    },
+    {
+        "id": "b7da0fba.8c3c2",
+        "type": "mongodb in",
+        "z": "29b5b8f8.76eb8",
+        "mongodb": "db37b5e.f56d4c8",
+        "name": "Find Devices",
+        "collection": "Devices",
+        "operation": "find",
+        "x": 510,
+        "y": 60,
+        "wires": [
+            [
+                "5f25e7eb.e9a058"
+            ]
+        ]
+    },
+    {
+        "id": "5f25e7eb.e9a058",
+        "type": "function",
+        "z": "29b5b8f8.76eb8",
+        "name": "Get All Devices",
+        "func": "var ObjectId = global.get('ObjectId');\n\nif(msg.payload.length == 0) return [{ result: \"error\", msg: \"Carro Não Encontrado\"},null]\nmsg.devices = msg.payload;\nmsg.car = msg.payload[0].cars.find(x => x.carVIN == msg.carVIN);\nmsg.payload = {_id: ObjectId(msg.car.profile)};\nreturn [null,msg];",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 320,
+        "y": 120,
+        "wires": [
+            [],
+            [
+                "bc92b279.04e208"
+            ]
+        ]
+    },
+    {
+        "id": "4876900.32e1b7",
+        "type": "mongodb in",
+        "z": "29b5b8f8.76eb8",
+        "mongodb": "db37b5e.f56d4c8",
+        "name": "Find Travels",
+        "collection": "Travel",
+        "operation": "find",
+        "x": 510,
+        "y": 200,
+        "wires": [
+            [
+                "ad2daf08.655178"
+            ]
+        ]
+    },
+    {
+        "id": "ad2daf08.655178",
+        "type": "function",
+        "z": "29b5b8f8.76eb8",
+        "name": "Get All Travels",
+        "func": "if(msg.payload.length == 0) return [{result: \"error\", msg:\"Carro sem viagens\"},null]\nmsg.travels = msg.payload;\nmsg.payload = { carVIN: msg.carVIN, records: { $gt: 0} };\nreturn [null,msg];",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 320,
+        "y": 260,
+        "wires": [
+            [],
+            [
+                "2b5ee342.c4f53c"
+            ]
+        ]
+    },
+    {
+        "id": "2b5ee342.c4f53c",
+        "type": "function",
+        "z": "29b5b8f8.76eb8",
+        "name": "Iterate Travels",
+        "func": "if (msg.i == undefined) msg.i = 0;\nmsg.payload = { travel_id: msg.travels[msg.i].id, behaviour: {\"$exists\" : false} }\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 520,
+        "y": 300,
+        "wires": [
+            [
+                "ff3a7030.7e2ac",
+                "325a49e2.dfe44e"
+            ]
+        ]
+    },
+    {
+        "id": "ff3a7030.7e2ac",
+        "type": "function",
+        "z": "29b5b8f8.76eb8",
+        "name": "Increment",
+        "func": "if ((msg.i += 1) < msg.travels.length) return msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 300,
+        "y": 360,
+        "wires": [
+            [
+                "2b5ee342.c4f53c"
+            ]
+        ]
+    },
+    {
+        "id": "325a49e2.dfe44e",
+        "type": "mongodb in",
+        "z": "29b5b8f8.76eb8",
+        "mongodb": "db37b5e.f56d4c8",
+        "name": "Find Sensors",
+        "collection": "Sensors",
+        "operation": "find",
+        "x": 740,
+        "y": 300,
+        "wires": [
+            [
+                "9a03aeb0.5302e"
+            ]
+        ]
+    },
+    {
+        "id": "9a03aeb0.5302e",
+        "type": "function",
+        "z": "29b5b8f8.76eb8",
+        "name": "Get All Sensors",
+        "func": "if(msg.payload.length == 0) return [{result: \"error\", msg:`Viagem ${msg.travels[msg.i].id} sem registro`},null];\nmsg.sensors = msg.payload;\nreturn [null,msg];",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 520,
+        "y": 380,
+        "wires": [
+            [],
+            [
+                "5a82f803.e595a8"
+            ]
+        ]
+    },
+    {
+        "id": "5a82f803.e595a8",
+        "type": "function",
+        "z": "29b5b8f8.76eb8",
+        "name": "Iterate Sensors",
+        "func": "if (msg.z == undefined) msg.z = 0;\nmsg.payload = msg.sensors[msg.z];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 740,
+        "y": 420,
+        "wires": [
+            [
+                "19be7607.bc0812",
+                "211166cf.3867c2"
+            ]
+        ]
+    },
+    {
+        "id": "19be7607.bc0812",
+        "type": "function",
+        "z": "29b5b8f8.76eb8",
+        "name": "Increment",
+        "func": "if ((msg.z += 1) < msg.sensors.length) return msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 500,
+        "y": 480,
+        "wires": [
+            [
+                "5a82f803.e595a8"
+            ]
+        ]
+    },
+    {
+        "id": "bc92b279.04e208",
+        "type": "mongodb in",
+        "z": "29b5b8f8.76eb8",
+        "mongodb": "db37b5e.f56d4c8",
+        "name": "Find Profile",
+        "collection": "Profiles",
+        "operation": "find",
+        "x": 510,
+        "y": 140,
+        "wires": [
+            [
+                "a89ac0c2.997ea8"
+            ]
+        ]
+    },
+    {
+        "id": "a89ac0c2.997ea8",
+        "type": "function",
+        "z": "29b5b8f8.76eb8",
+        "name": "Get Profile",
+        "func": "if(msg.payload.length == 0) return [{ result: \"error\", msg: \"Profile Não Encontrado\"},null]\nmsg.profile = msg.payload[0];\nmsg.payload = { carVIN: msg.carVIN, records: { $gt: 0} };\nreturn [null,msg];",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 310,
+        "y": 180,
+        "wires": [
+            [],
+            [
+                "4876900.32e1b7"
+            ]
+        ]
+    },
+    {
+        "id": "211166cf.3867c2",
+        "type": "switch",
+        "z": "29b5b8f8.76eb8",
+        "name": "Set Sensor",
+        "property": "payload.pid",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "else"
+            },
+            {
+                "t": "eq",
+                "v": "0C",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "0D",
+                "vt": "str"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 3,
+        "x": 950,
+        "y": 420,
+        "wires": [
+            [
+                "a40f7817.cecae"
+            ],
+            [
+                "d8e8c6c7.211cb8"
+            ],
+            [
+                "1f4174d3.6c0203"
+            ]
+        ]
+    },
+    {
+        "id": "d8e8c6c7.211cb8",
+        "type": "function",
+        "z": "29b5b8f8.76eb8",
+        "name": "Calculate Motor",
+        "func": "if (msg.payload.value > parseFloat(msg.profile.maxTorque.start)) msg.payload.behaviour = 0\nelse msg.payload.behaviour = 100\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1160,
+        "y": 420,
+        "wires": [
+            [
+                "eea11825.895cd8"
+            ]
+        ]
+    },
+    {
+        "id": "1f4174d3.6c0203",
+        "type": "function",
+        "z": "29b5b8f8.76eb8",
+        "name": "Calculate Velocity",
+        "func": "if(parseInt(msg.payload.value) > 120) msg.payload.behaviour = 0\nelse msg.payload.behaviour = 100;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1170,
+        "y": 460,
+        "wires": [
+            [
+                "eea11825.895cd8"
+            ]
+        ]
+    },
+    {
+        "id": "a40f7817.cecae",
+        "type": "function",
+        "z": "29b5b8f8.76eb8",
+        "name": "Error",
+        "func": "msg.payload = {result: \"error\", msg: \"Sensor Não implementado\"};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1130,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "eea11825.895cd8",
+        "type": "mongodb out",
+        "z": "29b5b8f8.76eb8",
+        "mongodb": "db37b5e.f56d4c8",
+        "name": "Update Sensor Behaviour",
+        "collection": "Sensors",
+        "payonly": true,
+        "upsert": false,
+        "multi": false,
+        "operation": "store",
+        "x": 1410,
+        "y": 440,
+        "wires": []
+    }
+]
